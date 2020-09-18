@@ -1,0 +1,27 @@
+{
+  "name": "QuantityMeasurementJavascript",
+  "version": "1.0.0",
+  "description": "Quantity Measurement Javascript problem using TDD approach and Javascript Concepts",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshi0806/QuantityMeasurementJavascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harshi0806/QuantityMeasurementJavascript/issues"
+  },
+  "homepage": "https://github.com/harshi0806/QuantityMeasurementJavascript#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3"
+  }
+}
