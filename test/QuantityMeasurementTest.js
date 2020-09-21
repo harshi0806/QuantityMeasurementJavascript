@@ -129,4 +129,11 @@ describe("Quantity Measurement", () => {
         assert.isTrue(compareCheck);
         callback();
     }
+    it("given2InchAnd5Centimeter_WhenCompared_ShouldReturnTrue"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.INCH, 2);
+        let quantity2 = new QuantityMeasurement(unit.Length.CENTIMETER, 5);
+        let compareCheck = quantityMeasurement.compare(quantity1, quantity2);
+        assert.isTrue(compareCheck);
+        callback();
+    }
 });
