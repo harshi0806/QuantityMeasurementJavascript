@@ -8,7 +8,8 @@ class Unit {
     Length = {
         FEET: 12,
         INCH: 1,
-        YARD: 36, 
+        YARD: 36,
+        CENTIMETER = 0.4, 
     };
 }
 
