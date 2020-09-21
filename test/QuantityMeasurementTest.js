@@ -81,4 +81,10 @@ describe("Quantity Measurement", () => {
         assert.equal(nullCheck, "Value is null or undefined");
         callback();
     } 
+    it("givenTwoInch_WhenCheckedForType_ShouldReturnEqual"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.INCH, 0);
+        let quantity2 = new QuantityMeasurement(unit.Length.INCH, 0);
+        assert.equal(typeof(quantity1), typeof(quantity2));
+        callback();
+    }
 });
