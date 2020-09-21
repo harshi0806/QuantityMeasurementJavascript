@@ -68,4 +68,11 @@ describe("Quantity Measurement", () => {
         assert.isTrue(compareCheck);
         callback();
     }
+    it("given0InchAnd0Inch_WhenCheckedForSameReference_ShouldReturnFalse"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.INCH, 0);
+        let quantity2 = new QuantityMeasurement(unit.Length.INCH, 0);
+        let referenceCheck = quantity1 === quantity2;
+        assert.isNotTrue(referenceCheck);
+        callback();
+    } 
 });
