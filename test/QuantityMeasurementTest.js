@@ -94,4 +94,11 @@ describe("Quantity Measurement", () => {
         assert.isTrue(compareCheck);
         callback();
     }
+    it("given1FeetAnd1Yard_WhenCompared_ShouldReturnNotTrue"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.FEET, 1);
+        let quantity2 = new QuantityMeasurement(unit.Length.YARD, 1);
+        let compareCheck = quantityMeasurement.compare(quantity1, quantity2);
+        assert.isNotTrue(compareCheck);
+        callback();
+    }
 });
