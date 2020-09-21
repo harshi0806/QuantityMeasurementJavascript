@@ -108,4 +108,11 @@ describe("Quantity Measurement", () => {
         assert.isNotTrue(compareCheck);
         callback();
     }
+    it("given1YardAnd36Inch_WhenCompared_ShouldReturnTrue"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.YARD, 1);
+        let quantity2 = new QuantityMeasurement(unit.Length.INCH, 36);
+        let compareCheck = quantityMeasurement.compare(quantity1, quantity2);
+        assert.isTrue(compareCheck);
+        callback();
+    }
 });
