@@ -45,5 +45,13 @@ describe("Quantity Measurement", () => {
         let quantity2 = new QuantityMeasurement(unit.Length.Feet, 0);
         assert.equal(typeof(quantity1), typeof(quantity2));
         callback();
+    }
+    it("givenTwoInch_WhenCheckedForValue_ShouldReturnEqual"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.INCH, 0);
+        let quantity2 = new QuantityMeasurement(unit.Length.INCH, 0);
+        let result1 = quantity1 instanceof QuantityMeasurement;
+        let result2 = quantity2 instanceof QuantityMeasurement;
+        assert.equal(result1, result2);
+        callback();
     }  
 });
