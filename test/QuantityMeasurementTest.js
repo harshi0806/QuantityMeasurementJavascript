@@ -5,7 +5,7 @@ var quantityMeasurement = new QuantityMeasurement();
 var unit = new Unit();
 
 describe("Quantity Measurement", () => {
-    it("given0FeetAnd0Inch_WhenCheckedForType_ShouldReturnEqual"), (callback) => {
+    it("given0FeetAnd0Inch_WhenCheckedForValue_ShouldReturnEqual"), (callback) => {
         let quantity1 = new QuantityMeasurement(unit.Length.Feet, 0);
         let quantity2 = new QuantityMeasurement(unit.Length.INCH, 0);
         let result1 = quantity1 instanceof QuantityMeasurement;
@@ -39,5 +39,11 @@ describe("Quantity Measurement", () => {
         let nullCheck = quantity1.checkNullValue();
         assert.equal(nullCheck, "Value is null or undefined");
         callback();
-    }   
+    } 
+    it("givenTwoFeet_WhenCheckedForType_ShouldReturnEqual"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.Feet, 0);
+        let quantity2 = new QuantityMeasurement(unit.Length.Feet, 0);
+        assert.equal(typeof(quantity1), typeof(quantity2));
+        callback();
+    }  
 });
