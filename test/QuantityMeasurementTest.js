@@ -87,4 +87,46 @@ describe("Quantity Measurement", () => {
         assert.equal(typeof(quantity1), typeof(quantity2));
         callback();
     }
+    it("given3FeetAnd1Yard_WhenCompared_ShouldReturnTrue"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.FEET, 3);
+        let quantity2 = new QuantityMeasurement(unit.Length.YARD, 1);
+        let compareCheck = quantityMeasurement.compare(quantity1, quantity2);
+        assert.isTrue(compareCheck);
+        callback();
+    }
+    it("given1FeetAnd1Yard_WhenCompared_ShouldReturnNotTrue"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.FEET, 1);
+        let quantity2 = new QuantityMeasurement(unit.Length.YARD, 1);
+        let compareCheck = quantityMeasurement.compare(quantity1, quantity2);
+        assert.isNotTrue(compareCheck);
+        callback();
+    }
+    it("given1InchAnd1Yard_WhenCompared_ShouldReturnNotTrue"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.INCH, 1);
+        let quantity2 = new QuantityMeasurement(unit.Length.YARD, 1);
+        let compareCheck = quantityMeasurement.compare(quantity1, quantity2);
+        assert.isNotTrue(compareCheck);
+        callback();
+    }
+    it("given1YardAnd36Inch_WhenCompared_ShouldReturnTrue"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.YARD, 1);
+        let quantity2 = new QuantityMeasurement(unit.Length.INCH, 36);
+        let compareCheck = quantityMeasurement.compare(quantity1, quantity2);
+        assert.isTrue(compareCheck);
+        callback();
+    }
+    it("given36InchAnd1Yard_WhenCompared_ShouldReturnTrue"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.INCH, 36);
+        let quantity2 = new QuantityMeasurement(unit.Length.YARD, 1);
+        let compareCheck = quantityMeasurement.compare(quantity1, quantity2);
+        assert.isTrue(compareCheck);
+        callback();
+    }
+    it("given1YardAnd3Feet_WhenCompared_ShouldReturnTrue"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.YARD, 1);
+        let quantity2 = new QuantityMeasurement(unit.Length.FEET, 3);
+        let compareCheck = quantityMeasurement.compare(quantity1, quantity2);
+        assert.isTrue(compareCheck);
+        callback();
+    }
 });
