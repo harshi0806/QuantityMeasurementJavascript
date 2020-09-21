@@ -75,4 +75,10 @@ describe("Quantity Measurement", () => {
         assert.isNotTrue(referenceCheck);
         callback();
     } 
+    it("givenInch_WhenCheckedForNull_ShouldReturnEqual"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.INCH, null);
+        let nullCheck = quantity1.checkNullValue();
+        assert.equal(nullCheck, "Value is null or undefined");
+        callback();
+    } 
 });
