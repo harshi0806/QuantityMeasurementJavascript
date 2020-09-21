@@ -87,4 +87,11 @@ describe("Quantity Measurement", () => {
         assert.equal(typeof(quantity1), typeof(quantity2));
         callback();
     }
+    it("given3FeetAnd1Yard_WhenCompared_ShouldReturnTrue"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.FEET, 3);
+        let quantity2 = new QuantityMeasurement(unit.Length.YARD, 1);
+        let compareCheck = quantityMeasurement.compare(quantity1, quantity2);
+        assert.isTrue(compareCheck);
+        callback();
+    }
 });
