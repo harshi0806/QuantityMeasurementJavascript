@@ -31,6 +31,10 @@ class QuantityMeasurement {
     compare = (quantity1, quantity2) => {
         return quantity1.baseUnitConversion() == quantity2.baseUnitConversion()
     };
+
+    addQuantities = (quantity1, quantity2) => {
+        return quantity1.baseUnitConversion() + quantity2.baseUnitConversion();
+    };
 }
 
 module.exports = QuantityMeasurement;

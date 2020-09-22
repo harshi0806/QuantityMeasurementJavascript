@@ -136,4 +136,32 @@ describe("Quantity Measurement", () => {
         assert.isTrue(compareCheck);
         callback();
     }
+    it("given2InchAnd2Inch_WhenAdded_ShouldReturnCorrectResult"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.INCH, 2);
+        let quantity2 = new QuantityMeasurement(unit.Length.INCH, 2);
+        let result = quantityMeasurement.addQuantities(quantity1, quantity2);
+        assert.equal(result, 4.0);
+        callback();
+    }
+    it("given1FeetAnd2Inch_WhenAdded_ShouldReturnCorrectResult"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.FEET, 1);
+        let quantity2 = new QuantityMeasurement(unit.Length.INCH, 2);
+        let result = quantityMeasurement.addQuantities(quantity1, quantity2);
+        assert.equal(result, 14.0);
+        callback();
+    }
+    it("given1FeetAnd1Feet_WhenAdded_ShouldReturnCorrectResult"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.FEET, 1);
+        let quantity2 = new QuantityMeasurement(unit.Length.FEET, 1);
+        let result = quantityMeasurement.addQuantities(quantity1, quantity2);
+        assert.equal(result, 24.0);
+        callback();
+    }
+    it("given2InchAnd2Point5Centimeter_WhenAdded_ShouldReturnCorrectResult"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.INCH, 2);
+        let quantity2 = new QuantityMeasurement(unit.Length.CENTIMETER, 2.5);
+        let result = quantityMeasurement.addQuantities(quantity1, quantity2);
+        assert.equal(result, 3.0);
+        callback();
+    }
 });
