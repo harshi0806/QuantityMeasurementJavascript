@@ -199,4 +199,11 @@ describe("Quantity Measurement", () => {
         assert.isTrue(compareCheck);
         callback();
     }
+    it("given1TonneAnd1000KiloGrams_WhenCompared_ShouldReturnTrue"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Weight.TONNE, 1);
+        let quantity2 = new QuantityMeasurement(unit.Weight.KILOGRAM, 1000);
+        let compareCheck = quantityMeasurement.compare(quantity1, quantity2);
+        assert.isTrue(compareCheck);
+        callback();
+    }
 });
