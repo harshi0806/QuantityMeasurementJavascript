@@ -136,4 +136,11 @@ describe("Quantity Measurement", () => {
         assert.isTrue(compareCheck);
         callback();
     }
+    it("given2InchAnd2Inch_WhenAdded_ShouldReturnCorrectResult"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.INCH, 2);
+        let quantity2 = new QuantityMeasurement(unit.Length.INCH, 2);
+        let result = quantityMeasurement.addQuantities(quantity1, quantity2);
+        assert.equal(result, 4.0);
+        callback();
+    }
 });
