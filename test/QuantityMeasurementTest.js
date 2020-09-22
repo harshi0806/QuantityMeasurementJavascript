@@ -150,4 +150,11 @@ describe("Quantity Measurement", () => {
         assert.equal(result, 14.0);
         callback();
     }
+    it("given1FeetAnd1Feet_WhenAdded_ShouldReturnCorrectResult"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.FEET, 1);
+        let quantity2 = new QuantityMeasurement(unit.Length.FEET, 1);
+        let result = quantityMeasurement.addQuantities(quantity1, quantity2);
+        assert.equal(result, 24.0);
+        callback();
+    }
 });
