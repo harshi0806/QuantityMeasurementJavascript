@@ -185,4 +185,11 @@ describe("Quantity Measurement", () => {
         assert.equal(result, 7.57);
         callback();
     }
+    it("given1LitreAnd1000Millilitre_WhenAdded_ShouldReturnCorrectResult"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Volume.LITRE, 1);
+        let quantity2 = new QuantityMeasurement(unit.Volume.MILLILITRE, 1000);
+        let result = quantityMeasurement.addQuantities(quantity1, quantity2);
+        assert.equal(result, 2.0);
+        callback();
+    }
 });
