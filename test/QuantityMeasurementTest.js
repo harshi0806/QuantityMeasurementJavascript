@@ -157,4 +157,11 @@ describe("Quantity Measurement", () => {
         assert.equal(result, 24.0);
         callback();
     }
+    it("given2InchAnd2Point5Centimeter_WhenAdded_ShouldReturnCorrectResult"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Length.INCH, 2);
+        let quantity2 = new QuantityMeasurement(unit.Length.CENTIMETER, 2.5);
+        let result = quantityMeasurement.addQuantities(quantity1, quantity2);
+        assert.equal(result, 3.0);
+        callback();
+    }
 });
