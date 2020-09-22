@@ -35,6 +35,10 @@ class QuantityMeasurement {
     addQuantities = (quantity1, quantity2) => {
         return quantity1.baseUnitConversion() + quantity2.baseUnitConversion();
     };
+
+    temperatureConversion = (quantity1) => {
+        return (quantity1 * 9 / 5) + 32;
+    };
 }
 
 module.exports = QuantityMeasurement;

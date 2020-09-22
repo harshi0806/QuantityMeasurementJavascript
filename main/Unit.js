@@ -17,6 +17,12 @@ class Unit {
       LITRE: 1.0,
       MILLILITRE: 0.001,
     };
+
+    Weight = {
+      KILOGRAM: 1.0,
+      GRAM: 0.001,
+      TONNE: 1000.0,
+    };
 }
 
 module.exports = Unit;

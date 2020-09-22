@@ -213,4 +213,10 @@ describe("Quantity Measurement", () => {
         assert.equal(result, 1001.0);
         callback();
     }
+    it("given212Fahrenhite_WhenConverted_ShouldReturnCorrectResult"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Temperature.FAHRENHEIT, 212);
+        let result = quantityMeasurement.temperatureConversion(quantity1);
+        assert.equal(result, 100.0);
+        callback();
+    }
 });
