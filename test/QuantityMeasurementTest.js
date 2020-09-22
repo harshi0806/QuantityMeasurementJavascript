@@ -178,4 +178,11 @@ describe("Quantity Measurement", () => {
         assert.isTrue(compareCheck);
         callback();
     }
+    it("given1GallonAnd3Point78Litres_WhenAdded_ShouldReturnCorrectResult"), (callback) => {
+        let quantity1 = new QuantityMeasurement(unit.Volume.GALLON, 1);
+        let quantity2 = new QuantityMeasurement(unit.Volume.LITRE, 3.78);
+        let result = quantityMeasurement.addQuantities(quantity1, quantity2);
+        assert.equal(result, 7.57);
+        callback();
+    }
 });
