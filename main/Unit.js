@@ -26,7 +26,7 @@ class Unit {
       TONNE: 1000.0,
     };
 
-    //Base unit for Temperature conversion is Fahrenhit
+    //Base unit for Temperature conversion is Fahrenheit
     Temperature = {
       FAHRENHEIT: "FAHRENHEIT",
       CELSIUS: "CELSIUS",
